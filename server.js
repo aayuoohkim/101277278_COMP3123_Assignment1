@@ -21,7 +21,7 @@ mongoose.connect(DataBase, {
     useNewUrlParser: true
 }).then(() => console.log("Database connected!"));
 
-const port = 8000;
+const port = process.env.PORT || 8000;
 app.listen(port, () => {
     console.log("App is listening on", port, "port..");
 });
